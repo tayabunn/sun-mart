@@ -88,7 +88,7 @@ export default function Register() {
               </label>
             </div>
 
-            <button type="submit" className="btn btn-primary w-full mt-4 text-white font-bold shadow-lg shadow-primary/30">
+            <button type="submit" className="btn btn-sm md:btn-md bg-[#E45C04] hover:bg-[#c44b03] w-full mt-4 text-white font-bold shadow-primary/30">
               <UserPlus size={18} /> Register
             </button>
           </form>
