@@ -64,10 +64,10 @@ Most stores are hard to use on phones and don't feel special. Sun Mart fixes thi
 <table>
   <tr>
     <td width="50%">
-      <img src="/asset/hero_bg.jpg" alt="Sun Mart Hero" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+      <img src="https://images.pexels.com/photos/13779258/pexels-photo-13779258.jpeg" alt="Sun Mart Hero" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
     </td>
     <td width="50%">
-      <img src="/asset/logo.png" alt="Sun Mart Brand" width="100%" style="border-radius:8px;aspect-ratio:1/1;object-fit:contain;background:#f8fafc" />
+      <img src="https://images.pexels.com/photos/19724489/pexels-photo-19724489.jpeg" alt="Sun Mart Brand" width="100%" style="border-radius:8px;aspect-ratio:1/1;object-fit:contain;background:#f8fafc" />
     </td>
   </tr>
   <tr>
