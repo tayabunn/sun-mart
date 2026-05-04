@@ -1,5 +1,6 @@
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
+import dns from "node:dns";
 dns.setDefaultResultOrder("ipv4first");
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
