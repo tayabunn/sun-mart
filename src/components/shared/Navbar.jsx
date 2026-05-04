@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <nav className="bg-base-100 shadow-sm sticky top-0 z-50 px-4 md:px-8 border-b border-base-200">
       <div className="navbar max-w-7xl mx-auto p-0 min-h-[4rem]">
-        {/* Navbar Start: Logo */}
+        
         <div className="navbar-start">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Image 
@@ -41,7 +41,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Navbar Center: Desktop Links */}
+        
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-4 font-semibold text-base-content/70">
             {navLinks.map((link) => (
@@ -59,11 +59,11 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Navbar End: Auth & Cart */}
+        
         <div className="navbar-end gap-1 md:gap-3">
           {user ? (
             <div className="flex items-center gap-2 md:gap-4">
-              {/* Cart Icon */}
+              
               <Link href="/cart" className="btn btn-ghost btn-circle relative hover:bg-base-200">
                 <ShoppingBag size={22} className="text-base-content/80" />
                 {totalItems > 0 && (
@@ -73,7 +73,7 @@ export default function Navbar() {
                 )}
               </Link>
 
-              {/* Profile Dropdown */}
+              
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border-2 border-[#E45C04]/10 hover:border-[#E45C04]/50 transition-all">
                   <div className="w-10 rounded-full relative overflow-hidden">
@@ -104,7 +104,7 @@ export default function Navbar() {
             </div>
           )}
 
-          {/* Mobile Menu Button */}
+          
           <button 
             className="btn btn-ghost btn-circle lg:hidden text-base-content/80" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -114,7 +114,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute left-0 top-full w-full bg-base-100 border-t border-base-200 shadow-2xl animate-in slide-in-from-top-4 duration-300 z-50">
           <ul className="menu menu-vertical p-4 gap-2">

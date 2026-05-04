@@ -1,90 +1,176 @@
-# <p align="center">☀️ Sun Mart - Premium Summer eCommerce</p>
+<div align="center">
 
-<p align="center">
-  <img src="public/banner.png" alt="Sun Mart Banner" width="100%">
-</p>
+# ☀️ Sun Mart
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/DaisyUI-v5-5A0EF8?style=for-the-badge&logo=daisyui" alt="DaisyUI">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React">
-</p>
+### Premium Summer & Lifestyle eCommerce Platform
 
----
+*Bridging vibrant seasonal storytelling with high-conversion eCommerce performance.*
 
-## 🌟 Overview
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-sun--mart.vercel.app-E45C04?style=for-the-badge)](https://sun-mart.vercel.app/)
+&nbsp;
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+&nbsp;
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+&nbsp;
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-**Sun Mart** is a modern, vibrant summer-themed eCommerce platform designed for a premium shopping experience. Whether you're looking for the perfect pair of sunglasses, trendy beachwear, or essential skincare, Sun Mart brings the heat with a sleek UI and smooth interactions.
-
-Built with the latest **Next.js 16 App Router**, **Tailwind CSS v4**, and **DaisyUI**, this project showcases high-performance rendering and state-of-the-art web design.
+</div>
 
 ---
 
-## ✨ Key Features
+## 📖 Table of Contents
 
-- 🚀 **Next.js 16 Power**: Utilizing the latest App Router for lightning-fast navigation and SEO optimization.
-- 🎨 **Premium Aesthetic**: A curated "Summer Vibe" design with vibrant colors, soft shadows, and modern typography.
-- ✨ **Dynamic Animations**: Smooth scroll-reveals and hover effects powered by `animate.css`.
-- 🔐 **Mock Auth System**: Fully implemented UI for Login/Register flows with protected route logic.
-- 📱 **Mobile First**: Pixel-perfect responsiveness across all devices.
-- 👤 **Profile Dashboard**: Personalized user profiles with mock settings management.
-- 📦 **Dynamic Product Grid**: Real-time rendering of products from structured JSON data.
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js 16](https://nextjs.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Animations**: [Animate.css](https://animate.style/)
-- **Auth Concept**: [Better-Auth](https://better-auth.com/) (Mocked)
+- [✨ Overview](#-overview)
+- [🚀 Live Link](#-live-link)
+- [❌ The Problem & ✅ The Solution](#-the-problem---the-solution)
+- [💡 Business Value & SEO](#-business-value--seo)
+- [🚀 Key Features](#-key-features)
+- [📦 Tech Stack & Architecture](#-tech-stack--architecture)
+- [🛠️ Installation & Setup](#-installation--setup)
+- [🚢 Production Deployment](#-production-deployment)
 
 ---
 
-## 🚀 Getting Started
+## ✨ Overview
 
-Follow these steps to get the project running locally:
+**Sun Mart** is a high-performance, visually stunning eCommerce platform dedicated to **premium summer essentials**. Designed to capture the "Summer Vibe," it offers a seamless blend of aesthetic brilliance and functional excellence, setting a new benchmark for seasonal retail.
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/tayabunn/sun-mart.git
-cd sun-mart
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Setup environment variables
-Create a `.env.local` file in the root directory:
-```env
-BETTER_AUTH_SECRET=your_secret_key
-BETTER_AUTH_URL=http://localhost:3000
-```
-
-### 4. Run the development server
-```bash
-npm run dev
-```
-
-Visit [http://localhost:3000](http://localhost:3000) to see the magic! ✨
+Engineered with the cutting-edge **Next.js 16**, **Tailwind CSS v4**, and **Better Auth**, the platform features a signature **Sun Orange & Emerald Green** palette. Every interaction is optimized for speed, security, and a premium "glow" experience. From high-fidelity product galleries to a secure, persistent checkout flow, Sun Mart is built to dominate the summer market.
 
 ---
 
+## ❌ The Problem & ✅ The Solution
 
-## 🗺️ Roadmap
+> **Most seasonal shops fail to deliver the "vibe" that drives sales.**
 
-- [ ] Real-time Payment Integration (Stripe/SSLCommerz)
-- [ ] User Review & Rating System
-- [ ] Dark/Light Mode Toggle
-- [ ] Multi-language Support (i18n)
+Traditional eCommerce often feels static and generic. Sun Mart solves this by injecting personality, motion, and speed into every pixel.
+
+| ❌ The Problem | ✅ Sun Mart's Solution |
+|---|---|
+| Static, dull seasonal stores with no engagement | A **Cinematic UI** with vibrant colors, hover effects & micro-animations |
+| Slow loading times leading to cart abandonment | **Next.js 16 SSR/ISR** for lightning-fast catalog performance |
+| Weak or clunky authentication flows | **Better Auth** with Google OAuth & Email/Password security |
+| Cart state lost during user sessions | **Persistent Global Context** ensuring a frictionless shopping journey |
+| Mobile experiences that feel like an afterthought | **Mobile-First architecture** optimized for luxury shoppers on the go |
 
 ---
 
-<p align="center">Made with ❤️ by <a href="https://github.com/tayabunn">Tayabun Nesa Jannat</a></p>
+## 🚀 Live Link
+
+**→ [Experience Sun Mart Live](https://sun-mart.vercel.app/)**
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="/asset/hero_bg.jpg" alt="Sun Mart Hero" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+    </td>
+    <td width="50%">
+      <img src="/asset/logo.png" alt="Sun Mart Brand" width="100%" style="border-radius:8px;aspect-ratio:1/1;object-fit:contain;background:#f8fafc" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>🌊 Cinematic Summer Storytelling</sub></td>
+    <td align="center"><sub>☀️ Premium Brand Identity</sub></td>
+  </tr>
+</table>
 
 ---
-*Happy Coding!* ✨
+
+## 💡 Business Value & SEO
+
+Sun Mart isn't just a shop; it's a high-converting business asset optimized for:
+
+| Feature                           | Impact                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------- |
+| **SEO Authority**           | Next.js 16 App Router ensures instant indexing and perfect Core Web Vitals      |
+| **Brand Trust**             | Modern glassmorphism and premium typography build immediate consumer confidence |
+| **Secure Core**             | Enterprise-grade **Better Auth** integration for safe customer data handling     |
+| **Seamless Conversion**     | Optimized UI/UX that eliminates technical friction at checkout                   |
+
+---
+
+## 🚀 Key Features
+
+- **🎬 Immersive Hero Experience** — Designed to hook users with high-fidelity visuals and motion.
+- **🛍️ Premium Product Catalog** — A responsive, high-performance grid with real-time category filtering.
+- **🔐 Secure Auth Ecosystem** — Seamless login via Google or Email using the **Better Auth** framework.
+- **🛒 Dynamic Global Cart** — Real-time persistent cart management across the entire site.
+- **📧 Newsletter Engine** — Integrated lead generation with premium styling and validation.
+- **📍 Localized Experience** — Customized contact details for headquarters in Dhaka, Bangladesh.
+
+---
+
+## 📦 Tech Stack & Architecture
+
+### **Core Production Dependencies**
+
+| Layer                      | Technology                                            |
+| -------------------------- | ----------------------------------------------------- |
+| **Framework**        | `next@16.2.4` (App Router)                          |
+| **State Management** | `react@19.2.4` with Context API                     |
+| **Auth Engine**      | `better-auth@^1.6.9`                                |
+| **Database**         | `mongodb@^7.2.0` (Atlas Cloud)                      |
+| **VFX & Animations** | `animate.css`, `tailwindcss@^4`                     |
+| **Iconography**      | `lucide-react`, `react-icons (FA6)`                  |
+
+### **Styling & UI Layers**
+
+| Layer                 | Technology                                                |
+| --------------------- | --------------------------------------------------------- |
+| **Foundation**  | `tailwindcss@^4`, `daisyui@^5`                      |
+| **Typography**  | Inter, System Sans-Serif                                  |
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone & Install**
+
+   ```bash
+   git clone https://github.com/tayabunn/sun-mart.git
+   cd sun-mart
+   npm install
+   ```
+
+2. **Environment Configuration**
+
+   Create a `.env` file in the root directory:
+
+   ```env
+   MONGODB_URI=your_mongodb_atlas_uri
+   BETTER_AUTH_SECRET=your_secret_key
+   BETTER_AUTH_URL=http://localhost:3000
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+
+3. **Start the Engine**
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🚢 Production Deployment
+
+Sun Mart is optimized for **Vercel** with full CI/CD support.
+
+- **Dynamic Routing**: Pre-configured segments for ultra-fast product page rendering.
+- **Build Excellence**: Optimized assets and scripts to ensure maximum performance in production.
+
+---
+
+## 🤝 Social & Contributing
+
+<div align="center">
+
+Crafted with passion by **[Tayabun Nesa Jannat](https://github.com/tayabunn)**.
+
+*Join us in redefining the summer shopping experience!*
+
+[![GitHub](https://img.shields.io/badge/GitHub-tayabunn-181717?style=for-the-badge&logo=github)](https://github.com/tayabunn)
+
+</div>

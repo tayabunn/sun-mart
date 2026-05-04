@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const router = useRouter();
   const { data: session, isPending, error: sessionError } = useSession();
 
-  // Derive user directly from session to avoid cascading renders/warnings
+
   const user = session?.user || null;
 
   const login = async (email, password) => {
@@ -43,8 +43,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateProfile = (data) => {
-    // Note: With Better-Auth, profile updates should be done via authClient.updateUser
-    // For now, we provide this as a placeholder or remove it to stay clean
+
+
   };
 
   return (

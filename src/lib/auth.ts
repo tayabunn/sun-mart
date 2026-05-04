@@ -3,10 +3,10 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import dns from "node:dns";
 
-// Fix for Windows DNS issues
+
 dns.setDefaultResultOrder("ipv4first");
 
-// Use environment variable for MongoDB connection
+
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://tayabunn_db:9HvLm0FhozYjgAty@ac-zbaixti-shard-00-00.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-01.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-02.x8nftsj.mongodb.net:27017/sun-mart?ssl=true&authSource=admin&retryWrites=true&w=majority";
 
 const client = new MongoClient(MONGODB_URI);

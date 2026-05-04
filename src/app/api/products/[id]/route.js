@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import db from "../../../../../public/db.json";
 
-// GET /api/products/[id] — returns a single product by id
+
 export async function GET(request, { params }) {
   const { id } = await params;
   const product = db.models.find((p) => String(p.id) === String(id));

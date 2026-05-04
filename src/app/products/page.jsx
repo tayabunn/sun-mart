@@ -13,7 +13,7 @@ export default async function ProductsPage() {
 
   return (
     <div className="flex-1 min-h-screen bg-base-200/30">
-      {/* Header Section */}
+      
       <section className="bg-white border-b border-base-200 py-12 px-4">
         <div className="max-w-7xl mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-black text-base-content tracking-tight">
@@ -25,7 +25,7 @@ export default async function ProductsPage() {
         </div>
       </section>
 
-      {/* Main Content */}
+      
       <main className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="text-sm font-medium text-base-content/50">

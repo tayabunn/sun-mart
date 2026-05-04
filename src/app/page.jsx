@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
+      
       <section className="relative bg-base-200 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center min-h-[70vh]">
         <div className="absolute inset-0 z-0">
           <Image 
@@ -43,7 +43,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Popular Products */}
+      
       <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center mb-12 animate__animated animate__fadeIn">
           <h2 className="text-4xl font-bold text-base-content mb-4">Popular Products</h2>
@@ -80,7 +80,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Summer Care Tips */}
+      
       <section id="care-tips" className="py-20 bg-primary/5 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -113,7 +113,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Top Brands */}
+      
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full border-t border-base-200">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Trusted by Top Brands</h2>

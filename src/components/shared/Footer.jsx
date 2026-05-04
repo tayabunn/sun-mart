@@ -9,11 +9,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-base-200 text-base-content mt-auto">
-      {/* Main Footer Content */}
+      
       <div className="max-w-7xl mx-auto px-4 pt-20 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
-          {/* Brand Column */}
+          
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <Image 
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-4">
@@ -57,7 +57,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Company</h3>
             <ul className="space-y-4">
@@ -68,7 +68,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Join the Vibe</h3>
             <p className="text-base-content/60">Subscribe to get summer tips and exclusive offers!</p>
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="border-t border-base-200 bg-base-200/30">
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-base-content/50">
