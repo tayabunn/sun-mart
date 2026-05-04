@@ -84,7 +84,7 @@ export default function Register() {
               <label className="label"><span className="label-text font-medium">Password</span></label>
               <label className="input input-bordered flex items-center gap-2 focus-within:outline-primary">
                 <Lock size={18} className="text-base-content/50" />
-                <input type="password" name="password" placeholder="••••••••" className="grow" />
+                <input type="password" name="password" placeholder="••••••••" className="grow w-full" />
               </label>
             </div>
 
