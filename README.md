@@ -90,3 +90,6 @@ Visit [http://localhost:3000](http://localhost:3000) to see the magic! ✨
 ---
 
 <p align="center">Made with ❤️ by <a href="https://github.com/tayabunn">Tayabunn</a></p>
+
+---
+*Happy Coding!* ✨
