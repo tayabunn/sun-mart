@@ -1,15 +1,12 @@
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
-import dns from "node:dns";
-
 dns.setDefaultResultOrder("ipv4first");
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
-if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
-  console.error("❌ Google OAuth credentials missing from .env");
-}
+// Forced direct connection string because the SRV lookup is failing on this machine
+const MONGODB_URI = "mongodb://tayabunn_db:9HvLm0FhozYjgAty@ac-zbaixti-shard-00-00.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-01.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-02.x8nftsj.mongodb.net:27017/sun-mart?ssl=true&authSource=admin&retryWrites=true&w=majority";
 
-const client = new MongoClient(process.env.MONGODB_URI || "");
+const client = new MongoClient(MONGODB_URI);
 const db = client.db("sun-mart");
 
 export const auth = betterAuth({
