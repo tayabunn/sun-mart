@@ -19,11 +19,9 @@ export default function Login() {
       return;
     }
 
-    // Mock successful login
-    login({
-      name: "John Doe",
-      email: email,
-      image: "https://i.pravatar.cc/150?img=11",
+    // Real login with Better-Auth
+    login(email, password).catch((err) => {
+      setError(err.message || "Failed to login. Please check your credentials.");
     });
   };
 

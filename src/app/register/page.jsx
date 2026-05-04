@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 import { Mail, Lock, User, Image as ImageIcon, UserPlus } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { signUp } from "@/lib/auth-client";
 
 export default function Register() {
   const { login } = useAuth();
@@ -23,7 +24,16 @@ export default function Register() {
       return;
     }
 
-    router.push("/login");
+    // Real registration with Better-Auth
+    signUp.email({
+      email,
+      password,
+      name,
+      image: photoUrl,
+      callbackURL: "/login",
+    }).catch((err) => {
+      setError(err.message || "Failed to register. Please try again.");
+    });
   };
 
   const handleGoogleLogin = () => {

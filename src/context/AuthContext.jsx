@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { useSession, signIn, signOut } from "@/lib/auth-client";
 
 const AuthContext = createContext();
 
@@ -10,32 +11,41 @@ export const AuthProvider = ({ children }) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const storedUser = localStorage.getItem("mockUser");
-      if (storedUser) {
-        setUser(JSON.parse(storedUser));
-      }
-    }, 0);
-    return () => clearTimeout(timer);
-  }, []);
+  const { data: session, isPending, error: sessionError } = useSession();
+  const [user, setUser] = useState(null);
 
-  const login = (userData) => {
-    setUser(userData);
-    localStorage.setItem("mockUser", JSON.stringify(userData));
-    router.push("/");
+  useEffect(() => {
+    if (session) {
+      setUser(session.user);
+    } else {
+      setUser(null);
+    }
+  }, [session]);
+
+  const login = async (email, password) => {
+    const { data, error } = await signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+    if (error) throw error;
+    return data;
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem("mockUser");
-    router.push("/");
+  const logout = async () => {
+    await signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          setUser(null);
+          router.push("/login");
+        },
+      },
+    });
   };
 
   const updateProfile = (data) => {
-    const updatedUser = { ...user, ...data };
-    setUser(updatedUser);
-    localStorage.setItem("mockUser", JSON.stringify(updatedUser));
+    // Better-Auth profile update would go here
+    setUser(prev => ({ ...prev, ...data }));
   };
 
   return (
