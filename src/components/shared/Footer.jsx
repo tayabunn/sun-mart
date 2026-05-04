@@ -1,62 +1,115 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { FaCcVisa, FaCcMastercard, FaCcPaypal, FaCcApplePay } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-neutral text-neutral-content mt-auto">
-      <div className="footer p-10 max-w-7xl mx-auto">
-        <aside>
-          <div className="mb-4">
-            <Image src="/asset/logo-footer.png" alt="Sun Mart Logo" width={180} height={50} className="h-16 w-auto object-contain" />
+    <footer className="bg-white border-t border-base-200 text-base-content mt-auto">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 pt-20 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          
+          {/* Brand Column */}
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/asset/logo.png" 
+                alt="Sun Mart Logo" 
+                width={45} 
+                height={45} 
+                className="h-10 w-auto object-contain" 
+              />
+              <h1 className="text-2xl font-bold tracking-tight text-[#E45C04]">
+                Sun<span className="text-emerald-900">Mart</span>
+              </h1>
+            </Link>
+            <p className="text-base-content/60 leading-relaxed max-w-xs">
+              Your ultimate destination for premium summer essentials. We bring the heat with style, protection, and quality.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center hover:bg-[#E45C04] hover:text-white transition-all duration-300">
+                <FaFacebookF size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center hover:bg-[#E45C04] hover:text-white transition-all duration-300">
+                <FaInstagram size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center hover:bg-[#E45C04] hover:text-white transition-all duration-300">
+                <FaXTwitter size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center hover:bg-[#E45C04] hover:text-white transition-all duration-300">
+                <FaYoutube size={18} />
+              </a>
+            </div>
           </div>
-          <p>
-            Sun Mart Industries Ltd.<br/>
-            Providing reliable summer essentials since 2024.
-          </p>
-          <div className="mt-4 flex flex-col gap-2">
-            <div className="flex items-center gap-2"><MapPin size={18} /> 123 Summer Breeze Ln, Miami, FL</div>
-            <div className="flex items-center gap-2"><Phone size={18} /> +1 (800) 123-4567</div>
-            <div className="flex items-center gap-2"><Mail size={18} /> hello@sunmart.com</div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Quick Links</h3>
+            <ul className="space-y-4">
+              <li><Link href="/" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Home</Link></li>
+              <li><Link href="/products" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Shop All</Link></li>
+              <li><Link href="/products?category=Skincare" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Skincare</Link></li>
+              <li><Link href="/products?category=Accessories" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Accessories</Link></li>
+            </ul>
           </div>
-        </aside> 
-        <nav>
-          <h6 className="footer-title">Shop</h6> 
-          <Link href="/#products" className="link link-hover">Accessories</Link> 
-          <Link href="/#products" className="link link-hover">Skincare</Link> 
-          <Link href="/#products" className="link link-hover">Outfits</Link>
-        </nav> 
-        <nav>
-          <h6 className="footer-title">Company</h6> 
-          <Link href="/" className="link link-hover">About us</Link> 
-          <Link href="/" className="link link-hover">Contact</Link> 
-          <Link href="/" className="link link-hover">Jobs</Link> 
-          <Link href="/" className="link link-hover">Press kit</Link>
-        </nav> 
-        <nav>
-          <h6 className="footer-title">Legal</h6> 
-          <Link href="/" className="link link-hover">Terms of use</Link> 
-          <Link href="/" className="link link-hover">Privacy policy</Link> 
-          <Link href="/" className="link link-hover">Cookie policy</Link>
-        </nav>
+
+          {/* Company */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Company</h3>
+            <ul className="space-y-4">
+              <li><Link href="/about-us" className="text-base-content/70 hover:text-[#E45C04] transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Contact</Link></li>
+              <li><Link href="/privacy" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-base-content/70 hover:text-[#E45C04] transition-colors">Terms & Conditions</Link></li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-emerald-900 uppercase tracking-wider">Join the Vibe</h3>
+            <p className="text-base-content/60">Subscribe to get summer tips and exclusive offers!</p>
+            <form className="relative">
+              <input 
+                type="email" 
+                placeholder="email@example.com" 
+                className="input input-bordered w-full pr-12 focus:border-[#E45C04] focus:outline-none bg-base-200/50" 
+              />
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#E45C04] text-white rounded-lg flex items-center justify-center hover:bg-emerald-900 transition-colors shadow-md shadow-[#E45C04]/20">
+                <Send size={16} />
+              </button>
+            </form>
+            <div className="pt-4 space-y-3">
+              <div className="flex items-center gap-3 text-base-content/70 text-sm">
+                <MapPin size={16} className="text-[#E45C04]" /> Dhaka, Bangladesh
+              </div>
+              <div className="flex items-center gap-3 text-base-content/70 text-sm">
+                <Phone size={16} className="text-[#E45C04]" /> +8801234567890
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div className="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300 max-w-7xl mx-auto flex justify-between items-center">
-        <aside className="items-center grid-flow-col">
-          <p>© {new Date().getFullYear()} Sun Mart. All rights reserved.</p>
-        </aside> 
-        <nav className="md:place-self-center md:justify-self-end">
-          <div className="grid grid-flow-col gap-4">
-            <a href="#" className="hover:text-primary transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-base-200 bg-base-200/30">
+        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-base-content/50">
+            © {currentYear} <span className="font-bold text-[#E45C04]">Sun Mart</span>. Crafted with ❤️ for a better summer.
+          </p>
+          <div className="flex items-center gap-6">
+            <div className="flex gap-4 text-3xl text-base-content/30">
+              <FaCcVisa className="hover:text-[#E45C04] transition-colors cursor-help" title="Visa" />
+              <FaCcMastercard className="hover:text-[#E45C04] transition-colors cursor-help" title="Mastercard" />
+              <FaCcPaypal className="hover:text-[#E45C04] transition-colors cursor-help" title="Paypal" />
+              <FaCcApplePay className="hover:text-[#E45C04] transition-colors cursor-help" title="Apple Pay" />
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     </footer>
   );

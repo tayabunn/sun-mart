@@ -35,7 +35,7 @@ export default function AboutUs() {
             </div>
             <div>
               <p className="font-bold">Our Location</p>
-              <p className="text-base-content/70">123 Sun Boulevard, Beach City, SC 45678</p>
+              <p className="text-base-content/70">Dhaka, Bangladesh</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -44,7 +44,7 @@ export default function AboutUs() {
             </div>
             <div>
               <p className="font-bold">Phone Number</p>
-              <p className="text-base-content/70">+1 (555) SUN-MART</p>
+              <p className="text-base-content/70">+8801234567890</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
