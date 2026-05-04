@@ -2,11 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star, ShoppingBag, Droplets, Sun, Wind, Umbrella } from "lucide-react";
 
+import db from "../../db.json";
+
 export default async function Home() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/products`, {
-    cache: "no-store",
-  });
-  const products = await res.json();
+  const products = db.models;
   const popularProducts = products.slice(0, 3);
 
   return (

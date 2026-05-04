@@ -1,11 +1,7 @@
-import React from "react";
+import db from "../../../db.json";
 
 const ModelsPage = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_URL}/api/products`,
-    { cache: "no-store" }
-  );
-  const models = await res.json();
+  const models = db.models;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
