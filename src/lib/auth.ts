@@ -2,8 +2,8 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient("mongodb://localhost:27017/database");
-const db = client.db();
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db("sun-mart");
 
 export const auth = betterAuth({
   database: mongodbAdapter(db, {
@@ -11,14 +11,7 @@ export const auth = betterAuth({
     client
   }),
   experimental: { joins: true },
-   //...other options
   emailAndPassword: { 
     enabled: true, 
-  }, 
-  socialProviders: { 
-    github: { 
-      clientId: process.env.GITHUB_CLIENT_ID as string, 
-      clientSecret: process.env.GITHUB_CLIENT_SECRET as string, 
-    }, 
-  }, 
+  },
 });
