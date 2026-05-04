@@ -10,9 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const router = useRouter();
   const pathname = usePathname();
-
   const { data: session, isPending, error: sessionError } = useSession();
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (session) {
