@@ -23,9 +23,6 @@ export default function Register() {
       return;
     }
 
-    // Mock successful registration and login
-    // Usually registration would redirect to login or auto-login.
-    // The requirement says: "If the user Register successfully then navigate him to his login page."
     router.push("/login");
   };
 

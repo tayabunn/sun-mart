@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import db from "../../../../db.json";
+import db from "../../../../public/db.json";
 
 // GET /api/products — returns all products
 export async function GET(request) {
