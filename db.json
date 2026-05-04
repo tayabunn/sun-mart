@@ -1,0 +1,224 @@
+{
+  "models": [
+    {
+      "id": 1,
+      "name": "UV Protection Sunglasses",
+      "brand": "SunShade",
+      "price": 15,
+      "rating": 4.7,
+      "stock": 10,
+      "description": "Stylish UV protection sunglasses perfect for summer outings.",
+      "image": "/asset/product_1_sunglasses.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 2,
+      "name": "Aloe Vera Cooling Gel",
+      "brand": "NatureCare",
+      "price": 12,
+      "rating": 4.9,
+      "stock": 25,
+      "description": "Soothing aloe vera gel to calm your skin after a day in the sun.",
+      "image": "/asset/product_2_aloe_vera_gel.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 3,
+      "name": "Tropical Print Board Shorts",
+      "brand": "WaveRider",
+      "price": 28,
+      "rating": 4.5,
+      "stock": 15,
+      "description": "Comfortable, quick-drying shorts featuring a vibrant tropical print.",
+      "image": "/asset/product_3_board_shorts.jpg",
+      "category": "Outfits"
+    },
+    {
+      "id": 4,
+      "name": "SPF 50 Sunscreen Lotion",
+      "brand": "SunGuard",
+      "price": 18,
+      "rating": 4.8,
+      "stock": 50,
+      "description": "Broad-spectrum SPF 50 sunscreen for ultimate sun protection.",
+      "image": "/asset/product_4_sunscreen.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 5,
+      "name": "Oversized Beach Towel",
+      "brand": "SandyToes",
+      "price": 22,
+      "rating": 4.6,
+      "stock": 30,
+      "description": "Soft, absorbent, and oversized towel for your beach days.",
+      "image": "/asset/product_5_beach_towel.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 6,
+      "name": "Classic Straw Hat",
+      "brand": "BreezeStyle",
+      "price": 25,
+      "rating": 4.4,
+      "stock": 20,
+      "description": "Elegant and functional straw hat to keep you cool and shaded.",
+      "image": "/asset/product_6_straw_hat.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 7,
+      "name": "Reef-Safe Sunscreen Spray",
+      "brand": "OceanGuard",
+      "price": 20,
+      "rating": 4.7,
+      "stock": 40,
+      "description": "Eco-friendly reef-safe sunscreen spray, SPF 30 protection.",
+      "image": "/asset/product_7.png",
+      "category": "Skincare"
+    },
+    {
+      "id": 8,
+      "name": "Waterproof Beach Bag",
+      "brand": "WaveRider",
+      "price": 35,
+      "rating": 4.6,
+      "stock": 18,
+      "description": "Durable waterproof tote bag perfect for beach and pool days.",
+      "image": "/asset/product_8.png",
+      "category": "Accessories"
+    },
+    {
+      "id": 9,
+      "name": "Summer Flip Flops",
+      "brand": "SandyToes",
+      "price": 14,
+      "rating": 4.3,
+      "stock": 60,
+      "description": "Lightweight and comfortable flip flops for sandy beach days.",
+      "image": "/asset/product_9.png",
+      "category": "Footwear"
+    },
+    {
+      "id": 10,
+      "name": "Cooling Facial Mist",
+      "brand": "NatureCare",
+      "price": 16,
+      "rating": 4.8,
+      "stock": 35,
+      "description": "Refreshing facial mist with rose water and hyaluronic acid.",
+      "image": "/asset/product_10.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 11,
+      "name": "Polarized Sport Sunglasses",
+      "brand": "SunShade",
+      "price": 32,
+      "rating": 4.9,
+      "stock": 12,
+      "description": "High-performance polarized lenses for outdoor sports activities.",
+      "image": "/asset/product_11.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 12,
+      "name": "Rash Guard Swim Shirt",
+      "brand": "WaveRider",
+      "price": 30,
+      "rating": 4.5,
+      "stock": 22,
+      "description": "UPF 50+ rash guard for surfing, swimming, and water sports.",
+      "image": "/asset/product_12.jpg",
+      "category": "Outfits"
+    },
+    {
+      "id": 13,
+      "name": "Insulated Water Bottle",
+      "brand": "HydroSun",
+      "price": 27,
+      "rating": 4.7,
+      "stock": 45,
+      "description": "Keeps drinks cold for 24 hours, perfect for beach and outdoor use.",
+      "image": "/asset/product_13.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 14,
+      "name": "After-Sun Repair Cream",
+      "brand": "NatureCare",
+      "price": 19,
+      "rating": 4.8,
+      "stock": 28,
+      "description": "Intensive repair cream to soothe and restore sun-exposed skin.",
+      "image": "/asset/product_14.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 15,
+      "name": "Bikini Set Tropical",
+      "brand": "BreezeStyle",
+      "price": 38,
+      "rating": 4.6,
+      "stock": 16,
+      "description": "Vibrant tropical-print bikini set with adjustable straps.",
+      "image": "/asset/product_15.jpg",
+      "category": "Outfits"
+    },
+    {
+      "id": 16,
+      "name": "Beach Umbrella XL",
+      "brand": "SandyToes",
+      "price": 45,
+      "rating": 4.4,
+      "stock": 8,
+      "description": "Extra-large beach umbrella with UV-blocking canopy, easy setup.",
+      "image": "/asset/product_16.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 17,
+      "name": "Portable Bluetooth Speaker",
+      "brand": "WaveSound",
+      "price": 55,
+      "rating": 4.8,
+      "stock": 20,
+      "description": "Waterproof Bluetooth speaker, perfect for pool parties and beach days.",
+      "image": "/asset/product_17.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": 18,
+      "name": "Tinted Lip Balm SPF 30",
+      "brand": "SunGuard",
+      "price": 9,
+      "rating": 4.7,
+      "stock": 75,
+      "description": "Moisturizing tinted lip balm with SPF 30 sun protection.",
+      "image": "/asset/product_18.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 19,
+      "name": "Sand-Free Beach Mat",
+      "brand": "SandyToes",
+      "price": 33,
+      "rating": 4.5,
+      "stock": 14,
+      "description": "Innovative sand-free mat that lets sand fall through, stays clean.",
+      "image": "/asset/product_19.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 20,
+      "name": "Kids Swim Floaties",
+      "brand": "WaveRider",
+      "price": 11,
+      "rating": 4.6,
+      "stock": 55,
+      "description": "Safe and comfortable arm floaties for kids aged 2-6 years.",
+      "image": "/asset/product_20.jpg",
+      "category": "Kids"
+    }
+  ]
+}

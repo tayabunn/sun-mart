@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "animate.css";
+@plugin "daisyui";
+
+@theme {
+  --color-primary: #e45c04;
+  --color-primary-content: #ffffff;
+  --color-secondary: #064e3b;
+  --color-secondary-content: #ffffff;
+  --color-accent: #f89f06;
+  --color-neutral: #064e3b;
+  --color-neutral-content: #ffffff;
+  --color-base-100: #fffefc;
+  --color-warning: #e08808;
+}
