@@ -6,10 +6,8 @@ import dns from "node:dns";
 // Fix for Windows DNS issues
 dns.setDefaultResultOrder("ipv4first");
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
-if (!MONGODB_URI) {
-  throw new Error("MONGODB_URI is not defined in the environment variables");
-}
+// Forced direct connection string because the SRV lookup is failing on this machine
+const MONGODB_URI = "mongodb://tayabunn_db:9HvLm0FhozYjgAty@ac-zbaixti-shard-00-00.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-01.x8nftsj.mongodb.net:27017,ac-zbaixti-shard-00-02.x8nftsj.mongodb.net:27017/sun-mart?ssl=true&authSource=admin&retryWrites=true&w=majority";
 
 const client = new MongoClient(MONGODB_URI);
 const db = client.db("sun-mart");

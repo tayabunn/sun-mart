@@ -3,58 +3,146 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { ShoppingBag, User, LogOut, Menu, X, Info, Tag, Home } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
+  const { totalItems } = useCart();
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isActive = (path) => pathname === path;
+
+  const navLinks = [
+    { name: "Home", href: "/", icon: Home },
+    { name: "Products", href: "/products", icon: Tag },
+    { name: "About Us", href: "/about-us", icon: Info },
+  ];
 
   return (
-    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-4 md:px-8">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><Link href={'/'}>Home</Link></li>
-            <li><Link href="/#products">Products</Link></li>
-            {user && <li><Link href="/profile">My Profile</Link></li>}
+    <nav className="bg-base-100 shadow-sm sticky top-0 z-50 px-4 md:px-8 border-b border-base-200">
+      <div className="navbar max-w-7xl mx-auto p-0 min-h-[4rem]">
+        {/* Navbar Start: Logo */}
+        <div className="navbar-start">
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Image 
+              src="/asset/logo.png" 
+              alt="Sun Mart Logo" 
+              width={45} 
+              height={45} 
+              className="h-10 w-auto object-contain" 
+            />
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight text-[#E45C04]">
+              Sun<span className="text-emerald-900">Mart</span>
+            </h1>
+          </Link>
+        </div>
+
+        {/* Navbar Center: Desktop Links */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 gap-4 font-semibold text-base-content/70">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link 
+                  href={link.href} 
+                  className={`hover:text-[#E45C04] transition-all hover:bg-transparent ${
+                    isActive(link.href) ? "text-[#E45C04] border-b-2 border-[#E45C04] rounded-none" : ""
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost hover:bg-transparent p-0 flex items-center gap-2">
-          <Image src="/asset/logo.png" alt="Sun Mart Logo" width={48} height={48} className="h-12 w-auto object-contain" />
-          <h1 className="text-2xl font-bold text-[#E45C04]">Sun<span className="text-emerald-900">Mart</span></h1>
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-medium">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/#products">Products</Link></li>
-          {user && <li><Link href="/profile">My Profile</Link></li>}
-        </ul>
-      </div>
-      <div className="navbar-end gap-2">
-        {user ? (
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 h-10 relative rounded-full border-2 border-primary overflow-hidden">
-                <Image fill alt="User avatar" src={user.image || "https://i.pravatar.cc/150?img=1"} sizes="40px" />
+
+        {/* Navbar End: Auth & Cart */}
+        <div className="navbar-end gap-1 md:gap-3">
+          {user ? (
+            <div className="flex items-center gap-2 md:gap-4">
+              {/* Cart Icon */}
+              <Link href="/cart" className="btn btn-ghost btn-circle relative hover:bg-base-200">
+                <ShoppingBag size={22} className="text-base-content/80" />
+                {totalItems > 0 && (
+                  <span className="absolute top-1 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#E45C04] text-[10px] font-bold text-white shadow-sm animate-in fade-in zoom-in">
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+
+              {/* Profile Dropdown */}
+              <div className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border-2 border-[#E45C04]/10 hover:border-[#E45C04]/50 transition-all">
+                  <div className="w-10 rounded-full relative overflow-hidden">
+                    <Image 
+                      fill 
+                      src={user.image || "https://i.pravatar.cc/150?img=32"} 
+                      alt="User" 
+                      sizes="40px"
+                    />
+                  </div>
+                </div>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow-xl bg-base-100 rounded-box w-56 border border-base-200 animate-in slide-in-from-top-2">
+                  <li className="px-4 py-3 border-b border-base-200 mb-2">
+                    <p className="font-bold text-base-content">{user.name}</p>
+                    <p className="text-xs text-base-content/50 truncate">{user.email}</p>
+                  </li>
+                  <li><Link href="/profile" className="py-3 flex gap-3"><User size={18} /> My Profile</Link></li>
+                  <li><Link href="/orders" className="py-3 flex gap-3"><ShoppingBag size={18} /> My Orders</Link></li>
+                  <div className="divider my-1"></div>
+                  <li><button onClick={logout} className="py-3 flex gap-3 text-error hover:bg-error/10"><LogOut size={18} /> Logout</button></li>
+                </ul>
               </div>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li className="px-4 py-2 font-semibold border-b">{user.name}</li>
-              <li><Link href="/profile">Profile</Link></li>
-              <li><button onClick={logout} className="text-error">Logout</button></li>
-            </ul>
-          </div>
-        ) : (
-          <>
-            <Link href="/login" className="btn btn-ghost">Login</Link>
-            <Link href="/register" className="btn bg-emerald-900 hover:bg-emerald-950 text-white border-none">Register</Link>
-          </>
-        )}
+          ) : (
+            <div className="flex items-center gap-2">
+              <Link href="/login" className="btn btn-ghost btn-sm md:btn-md font-bold uppercase text-xs tracking-wider">Login</Link>
+              <Link href="/register" className="btn btn-sm md:btn-md bg-[#E45C04] hover:bg-[#c44b03] text-white border-none px-6 shadow-lg shadow-[#E45C04]/20 uppercase text-xs font-bold tracking-wider">Signup</Link>
+            </div>
+          )}
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="btn btn-ghost btn-circle lg:hidden text-base-content/80" 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Drawer */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute left-0 top-full w-full bg-base-100 border-t border-base-200 shadow-2xl animate-in slide-in-from-top-4 duration-300 z-50">
+          <ul className="menu menu-vertical p-4 gap-2">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link 
+                  href={link.href} 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center gap-4 py-4 text-lg ${isActive(link.href) ? "bg-[#E45C04]/10 text-[#E45C04] font-bold" : ""}`}
+                >
+                  <link.icon size={20} /> {link.name}
+                </Link>
+              </li>
+            ))}
+            {user && (
+              <li>
+                <Link 
+                  href="/profile" 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-4 py-4 text-lg"
+                >
+                  <User size={20} /> Profile
+                </Link>
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 }

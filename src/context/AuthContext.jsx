@@ -1,24 +1,17 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { createContext, useContext } from "react";
+import { useRouter } from "next/navigation";
 import { useSession, signIn, signOut } from "@/lib/auth-client";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
   const router = useRouter();
-  const pathname = usePathname();
   const { data: session, isPending, error: sessionError } = useSession();
 
-  useEffect(() => {
-    if (session) {
-      setUser(session.user);
-    } else {
-      setUser(null);
-    }
-  }, [session]);
+  // Derive user directly from session to avoid cascading renders/warnings
+  const user = session?.user || null;
 
   const login = async (email, password) => {
     const { data, error } = await signIn.email({
@@ -43,7 +36,6 @@ export const AuthProvider = ({ children }) => {
     await signOut({
       fetchOptions: {
         onSuccess: () => {
-          setUser(null);
           router.push("/login");
         },
       },
@@ -51,12 +43,12 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateProfile = (data) => {
-    // Better-Auth profile update would go here
-    setUser(prev => ({ ...prev, ...data }));
+    // Note: With Better-Auth, profile updates should be done via authClient.updateUser
+    // For now, we provide this as a placeholder or remove it to stay clean
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateProfile, signInWithGoogle }}>
+    <AuthContext.Provider value={{ user, isPending, login, logout, updateProfile, signInWithGoogle }}>
       {children}
     </AuthContext.Provider>
   );

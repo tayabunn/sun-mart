@@ -1,0 +1,224 @@
+{
+  "models": [
+    {
+      "id": 1,
+      "name": "UV Protection Sunglasses",
+      "brand": "SunShade",
+      "price": 15,
+      "rating": 4.7,
+      "stock": 10,
+      "description": "Stylish UV protection sunglasses perfect for summer outings and beach days.",
+      "image": "/asset/product_1_sunglasses.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 2,
+      "name": "Luxury Summer Perfume",
+      "brand": "Chanel",
+      "price": 120,
+      "rating": 4.9,
+      "stock": 5,
+      "description": "The iconic Chanel N°5 Eau de Parfum, a timeless fragrance with sophisticated floral notes.",
+      "image": "/asset/product_2_aloe_vera_gel.jpg",
+      "category": "Fragrance"
+    },
+    {
+      "id": 3,
+      "name": "Elegant Straw Beach Bag",
+      "brand": "BreezeStyle",
+      "price": 45,
+      "rating": 4.8,
+      "stock": 15,
+      "description": "Hand-woven straw tote with a stylish silk scarf accent, perfect for all your beach essentials.",
+      "image": "/asset/product_3_board_shorts.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 4,
+      "name": "Designer Resort Set",
+      "brand": "BVLGARI",
+      "price": 250,
+      "rating": 4.9,
+      "stock": 8,
+      "description": "Luxury straw bag and matching sun hat set from the exclusive BVLGARI Resort Dubai collection.",
+      "image": "/asset/product_4_sunscreen.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "name": "Sun Protection Bundle",
+      "brand": "Hawaiian Tropic",
+      "price": 35,
+      "rating": 4.7,
+      "stock": 30,
+      "description": "Complete summer protection kit including lotion, spray, and lip care in a signature beach tote.",
+      "image": "/asset/product_5_beach_towel.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 6,
+      "name": "Skyview Hydration Bottle",
+      "brand": "HydroSun",
+      "price": 25,
+      "rating": 4.5,
+      "stock": 20,
+      "description": "Clear, high-durability hydration bottle designed to keep you refreshed under the summer sun.",
+      "image": "/asset/product_6_straw_hat.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 7,
+      "name": "Solaris Advance Sunscreen",
+      "brand": "Solaris",
+      "price": 28,
+      "rating": 4.8,
+      "stock": 40,
+      "description": "SPF 50+ broad-spectrum sunscreen and after-sun recovery balm for professional skin protection.",
+      "image": "/asset/product_7.png",
+      "category": "Skincare"
+    },
+    {
+      "id": 8,
+      "name": "Handheld Cooling Fan",
+      "brand": "BreezeStyle",
+      "price": 18,
+      "rating": 4.6,
+      "stock": 50,
+      "description": "Portable, USB-rechargeable mini fan in a sleek lavender finish for instant personal cooling.",
+      "image": "/asset/product_8.png",
+      "category": "Electronics"
+    },
+    {
+      "id": 9,
+      "name": "Portable Air Cooler",
+      "brand": "FrostFlow",
+      "price": 65,
+      "rating": 4.7,
+      "stock": 12,
+      "description": "Desktop evaporative air cooler with water tank for a refreshing humidified breeze anywhere.",
+      "image": "/asset/product_9.png",
+      "category": "Electronics"
+    },
+    {
+      "id": 10,
+      "name": "Sunscreen Spray Trio",
+      "brand": "ISDIN",
+      "price": 42,
+      "rating": 4.9,
+      "stock": 18,
+      "description": "Advanced Fotoprotector trio including Hydro Lotion and Hydro Oil for versatile sun defense.",
+      "image": "/asset/product_10.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 11,
+      "name": "Nivea Sun Protect Spray",
+      "brand": "Nivea",
+      "price": 22,
+      "rating": 4.8,
+      "stock": 60,
+      "description": "SPF 50+ moisture and protection spray, water-resistant and fast-absorbing for the whole family.",
+      "image": "/asset/product_11.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 12,
+      "name": "Vitamin E Moisturizer",
+      "brand": "NatureCare",
+      "price": 19,
+      "rating": 4.6,
+      "stock": 35,
+      "description": "All-over body cream enriched with Vitamin E to deeply hydrate sun-exposed skin.",
+      "image": "/asset/product_12.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 13,
+      "name": "Luxury Summer Silk Scarf",
+      "brand": "SilkRoute",
+      "price": 55,
+      "rating": 4.9,
+      "stock": 10,
+      "description": "Premium silk scarf with vibrant traditional patterns, an elegant addition to any summer outfit.",
+      "image": "/asset/product_13.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 14,
+      "name": "Hydrating Face Serum",
+      "brand": "JasnyDerm",
+      "price": 38,
+      "rating": 4.8,
+      "stock": 25,
+      "description": "Hyaluronic acid and Niacinamide serum designed to restore moisture and glow to your face.",
+      "image": "/asset/product_14.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 15,
+      "name": "Pure Aloe Vera Gel",
+      "brand": "Le' Hype",
+      "price": 14,
+      "rating": 4.7,
+      "stock": 45,
+      "description": "Fragrance and alcohol-free pure aloe vera gel for face, body, and hair soothing care.",
+      "image": "/asset/product_15.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 16,
+      "name": "Summer Beach Hat & Shades",
+      "brand": "BreezeStyle",
+      "price": 32,
+      "rating": 4.5,
+      "stock": 22,
+      "description": "Classic straw sun hat paired with round blue-tinted sunglasses for the ultimate beach look.",
+      "image": "/asset/product_16.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 17,
+      "name": "Beach Essentials Kit",
+      "brand": "WaveRider",
+      "price": 58,
+      "rating": 4.8,
+      "stock": 14,
+      "description": "Curated set including comfortable sandals, pink frames, and Dot & Key watermelon sunscreen.",
+      "image": "/asset/product_17.jpg",
+      "category": "Accessories"
+    },
+    {
+      "id": 18,
+      "name": "Vilvah Melt-in-Milk Sunscreen",
+      "brand": "Vilvah",
+      "price": 26,
+      "rating": 4.9,
+      "stock": 40,
+      "description": "Non-greasy, melt-in-milk sunscreen lotion enriched with soy milk extract for smooth protection.",
+      "image": "/asset/product_18.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 19,
+      "name": "Milk Facial Toner",
+      "brand": "Vilvah",
+      "price": 20,
+      "rating": 4.7,
+      "stock": 35,
+      "description": "Refreshing rice milk facial toner with glycolic acid for pore minimizing and hydration.",
+      "image": "/asset/product_19.jpg",
+      "category": "Skincare"
+    },
+    {
+      "id": 20,
+      "name": "White Cleansing Foam",
+      "brand": "L-White",
+      "price": 18,
+      "rating": 4.6,
+      "stock": 48,
+      "description": "Gentle white cleansing foam with diamond powder for exfoliation and brightening.",
+      "image": "/asset/product_20.jpg",
+      "category": "Skincare"
+    }
+  ]
+}

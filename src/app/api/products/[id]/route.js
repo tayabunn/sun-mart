@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import db from "../../../../../db.json";
+import db from "../../../../../public/db.json";
 
 // GET /api/products/[id] — returns a single product by id
 export async function GET(request, { params }) {
