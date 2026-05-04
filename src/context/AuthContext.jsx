@@ -30,6 +30,15 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const signInWithGoogle = async () => {
+    const { data, error } = await signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+    if (error) throw error;
+    return data;
+  };
+
   const logout = async () => {
     await signOut({
       fetchOptions: {
@@ -47,7 +56,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateProfile }}>
+    <AuthContext.Provider value={{ user, login, logout, updateProfile, signInWithGoogle }}>
       {children}
     </AuthContext.Provider>
   );

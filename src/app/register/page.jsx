@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { signUp } from "@/lib/auth-client";
 
 export default function Register() {
-  const { login } = useAuth();
+  const { login, signInWithGoogle } = useAuth();
   const router = useRouter();
   const [error, setError] = useState("");
 
@@ -37,10 +37,8 @@ export default function Register() {
   };
 
   const handleGoogleLogin = () => {
-    login({
-      name: "Google User",
-      email: "google@example.com",
-      image: "https://i.pravatar.cc/150?img=12",
+    signInWithGoogle().catch((err) => {
+      setError(err.message || "Failed to login with Google.");
     });
   };
 

@@ -6,7 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 import { Mail, Lock, LogIn } from "lucide-react";
 
 export default function Login() {
-  const { login } = useAuth();
+  const { login, signInWithGoogle } = useAuth();
   const [error, setError] = useState("");
 
   const handleLogin = (e) => {
@@ -26,10 +26,8 @@ export default function Login() {
   };
 
   const handleGoogleLogin = () => {
-    login({
-      name: "Google User",
-      email: "google@example.com",
-      image: "https://i.pravatar.cc/150?img=12",
+    signInWithGoogle().catch((err) => {
+      setError(err.message || "Failed to login with Google.");
     });
   };
 
