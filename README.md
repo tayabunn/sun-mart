@@ -47,11 +47,11 @@ Traditional eCommerce often feels static and generic. Sun Mart solves this by in
 
 | ❌ The Problem | ✅ Sun Mart's Solution |
 |---|---|
-| Static, dull seasonal stores with no engagement | A **Cinematic UI** with vibrant colors, hover effects & micro-animations |
-| Slow loading times leading to cart abandonment | **Next.js 16 SSR/ISR** for lightning-fast catalog performance |
-| Weak or clunky authentication flows | **Better Auth** with Google OAuth & Email/Password security |
-| Cart state lost during user sessions | **Persistent Global Context** ensuring a frictionless shopping journey |
-| Mobile experiences that feel like an afterthought | **Mobile-First architecture** optimized for luxury shoppers on the go |
+| **Fragmented Branding**: Generic footers and disconnected layouts | **Premium Design System**: Fully redesigned Footer and Navbar with custom "Summer Vibe" aesthetics |
+| **Broken Navigation**: 404 errors and missing informational pages | **Seamless Routing**: Integrated About Us and Product pages to ensure a complete user journey |
+| **Auth Failures**: CORS and 403 errors blocking users on production (Vercel) | **Production-Ready Auth**: Dynamic baseURL resolution and Better Auth for flawless production logins |
+| **Data Silos**: Hardcoded product data difficult to maintain | **Unified Data Engine**: Single source of truth via `db.json` with high-fidelity asset metadata |
+| **Visual Friction**: Static product grids with no interactive feedback | **Cinematic Experience**: Interactive cards with premium hover effects and smooth transitions |
 
 ---
 
